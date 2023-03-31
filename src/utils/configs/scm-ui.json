@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Identity Management",
+    "key": "IdentityManagement",
+    "functions": [
+      {
+        "name": "Admin check",
+        "type": "basic",
+        "contract": "account_manager",
+        "method": "ownerCheck",
+        "inputs": [
+          {
+            "fieldname": "address",
+            "name": "Address",
+            "type": "address",
+            "placeholder": "address",
+            "copy": true,
+            "rule": "address"
+          }
+        ],
+        "outputs": [
+          {
+            "fieldname": "",
+            "name": "Output",
+            "type": "text",
+            "placeholder": "Result"
+          }
+        ],
+        "description": "lorem ipsum dolor sit amet",
+        "btnSubmit": {
+          "type": "call",
+          "submitText": "getUpdate"
+        }
+      },
+      {
+        "name": "Number of Proposal",
+        "type": "basic",
+        "contract": "account_manager",
+        "method": "MSTxCounter",
+        "inputs": [],
+        "outputs": [
+          {
+            "fieldname": "",
+            "name": "Output",
+            "type": "text",
+            "placeholder": "number"
+          }
+        ],
+        "description": "lorem ipsum dolor sit amet",
+        "btnSubmit": {
+          "type": "call",
+          "submitText": "getUpdate"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Asset's NFT Profile",
+    "key": "NFTManagement",
+    "functions": [
+      {
+        "name": "Get NFT URI",
+        "type": "basic",
+        "contract": "nft_manager",
+        "method": "tokenURI",
+        "inputs": [
+          {
+            "fieldname": "nftId",
+            "name": "NFT ID",
+            "type": "numeric",
+            "placeholder": "number",
+            "copy": true,
+            "rule": "numeric"
+          }
+        ],
+        "outputs": [
+          {
+            "fieldname": "",
+            "name": "Output",
+            "type": "text",
+            "placeholder": "Result"
+          }
+        ],
+        "description": "lorem ipsum dolor sit amet",
+        "btnSubmit": {
+          "type": "call",
+          "submitText": "getUpdate"
+        }
+      },
+      {
+        "name": "Create a new NFT",
+        "type": "basic",
+        "contract": "nft_manager",
+        "method": "mintNFT",
+        "inputs": [
+          {
+            "fieldname": "recipient",
+            "name": "recipient",
+            "type": "address",
+            "placeholder": "address",
+            "copy": true,
+            "rule": "address"
+          },
+          {
+            "fieldname": "uriNFT",
+            "name": "uriNFT",
+            "type": "text",
+            "placeholder": "uri",
+            "copy": true,
+            "rule": "text"
+          }
+        ],
+        "outputs": [],
+        "description": "lorem ipsum dolor sit amet",
+        "btnSubmit": {
+          "type": "send",
+          "submitText": "mint"
+        }
+      }
+    ]
+  }
+]
